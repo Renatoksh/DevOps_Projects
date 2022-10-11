@@ -26,6 +26,7 @@
     * sudo apt update
 * [x] Run apache2 package installation
     * sudo apt install apache2
+    * ![](./img/apache2.PNG)
 * Note: If it is green and running, then you did everything correctly – you have just launched your first Web Server in the Clouds!
 * [x] Open TCP port 80, which is the default port that web browser use to access pages on the Internet
 * [x]Add a rule to EC2 instance configuration to open inbound connection through port 80
@@ -33,6 +34,7 @@
 * test how our Apache HTTP server can respond to requests from the Internet
 * [x] Open a web browser of your choice and try yo access following url
     * http://<Public-IP-Address>:80
+    * ![](./img/TCP80Open.PNG)
     * Note: If you see a page displaying the "Apache2 Ubuntu Default Page ... It works" then the web server is now correctly installed and accesible though your firewall. 
     In fact, it is the same content that you previously got by ‘curl’ command, but represented in nice HTML formatting by your web browser.
 
@@ -42,13 +44,18 @@
 * [x] Use 'apt' to acquire and install this software
     * sudo apt install mysql-server
         * Note: When prompted, confirm installation by typing Y, and then ENTER.
+        * ![](./img/MySQLInstall.PNG)
+    * sudo mysql
+        * ![](./img/MySQLAccess.PNG)
 * [x] run security script
     * ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
         * Note: This script will remove some insecure default settings and lock down access to your database system. Before running the script you will set a password for the root user, using mysql_native_password as default authentication method. We’re defining this user’s password as PassWord.1.
+        * ![](./img/mySqlUserPassword.PNG)
 * [x] Exit the MySql shell with 
     * mysql > exit
 * [x] Start the interactive script by running
     * sudo mysql_secure_installation
+    * ![](./img/validatePassword.PNG)
     * Answer Y for yes, or anything else to continue without enabling
 * [x] Levels of password
     * There are three levels of password validation policy:
@@ -58,12 +65,15 @@
         STRONG Length >= 8, numeric, mixed case, special characters and dictionary              file
 
         Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: 1
+    * ![](./img/LevelPassword.PNG)
     * If you enabled password validation, you’ll be shown the password strength for the root password you just entered and your server will ask if you want to continue with that password. If you are happy with your current password, enter Y for “yes” at the prompt:
 
     Estimated strength of the password: 100 
     Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : y
+    * ![](./img/LevelsPassword.PNG)
 * [x] Testing your log in to the MyAql console
     * sudo mysql -p
+    * ![](./img/MySqlAccess_p.PNG)
 * [x] To exit the MySql console:
     * mysql> exit
     * Note: It is required to provide a password to connect as the root user.
@@ -76,11 +86,12 @@
 
 * [x] To install these 3 packages at once :
     * sudo apt install php libapache2-mod-php php-mysql
+    * ![](./img/apacheInstall.PNG)
 * [x] to confirm your PHP version:
     * php -v
-    * image.png
+    * ![](./img/phpVersion.PNG)
     * At this point, your LAMP stack is completely installed and fully operational
-    * image.png
+    * ![](./img/Instance_image.PNG)
 
 ## Step 4 Creating a Virtual Host for your Website using Apache
 ### In this project, you will set up a domain called projectlamp, but you can replace this with any domain of your choice.
@@ -104,6 +115,7 @@
                 CustomLog ${APACHE_LOG_DIR}/access.log combined
           </VirtualHost>
     * Save and close the file, esc + :wq!, hit ENTER
+    * ![](./img/virtualHost.PNG)
 * [x] use the ls command to show the new file in the sites-available directory
     * sudo ls /etc/apache2/sites-available
     * You will see something like this: 
@@ -119,8 +131,10 @@
     * sudo systemctl reload apache2
 * [x] Your new website is now active, but the web root /var/www/projectlamp is still empty. Create an index.html file in that location so that we can test that the virtual host works as expected:
     * sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
+    * ![](./img/siteCreation.PNG)
 * [x] Open your website URL using IP address
     * http://<Public-IP-Address>:80
+    * ![](./img/SiteAvailable.PNG)
     * If you see the text from ‘echo’ command you wrote to index.html file, then it means your Apache virtual host is working as expected.
 In the output you will see your server’s public hostname (DNS name) and public IP address. You can also access your website in your browser by public DNS name, not only by IP – try it out, the result must be the same (port is optional)
 
@@ -136,6 +150,7 @@ In the output you will see your server’s public hostname (DNS name) and public
         #To this:
         DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
       </IfModule>
+      * ![](./img/enablePhpOnTheWebSite.PNG)
 * [x] you will need to reload Apache so the changes take effect
     * sudo systemctl reload apache2
 * [x] we will create a PHP script to test that PHP is correctly installed and configured on your server.
@@ -145,7 +160,7 @@ In the output you will see your server’s public hostname (DNS name) and public
     * <?php
       phpinfo();
 * When you are finished, save and close the file, refresh the page and you will see a page similar to this:
-    * image.png
+    * ![](./img/PHP.PNG)
 * [x] This page provides information about your server from the perspective of PHP. It is useful for debugging and to ensure that your settings are being applied correctly.
     * If you can see this page in your browser, then your PHP installation is working as expected.
 * [x] After checking the relevant information about your PHP server through that page, it’s best to remove the file you created as it contains sensitive information about your PHP environment -and your Ubuntu server. You can use rm to do so:
@@ -154,7 +169,7 @@ In the output you will see your server’s public hostname (DNS name) and public
     ![This guide was inspired by Digital Ocean] (https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04#step-3-%E2%80%94-installing-php)
 
 # Congratulations! You have finished your very first REAL LIFE PROJECT by deploying a LAMP stack website in AWS Cloud!
-* image.png
+* ![](./img/Completed.png)
 
 
 
