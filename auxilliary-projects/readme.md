@@ -32,5 +32,36 @@
 #
 # Tasks
 ### 1. Create a git repository and name it auxiliary-projects
-* 
+* ![](./img/gitRepository.PNG)
+#
+### 2. Name your shell script onboarding users
+* ![](./img/onboardinUsersScriptname.PNG)
+#
+### 3. Screen record your work, and demo how you have onboarded users onto the server
+* ![](./img/prerequisites.PNG)
+* Shell directory created
+* id_rsa.pub file created under Shell directory
+    *![](./img/public_key_added.PNG)
+* csv file that includes the user names created
+    * ![](./img/users.PNG)
+* onboarding users.sh file created
+    * ![](./img/onboardingScript.PNG)
+
+#
+### Adding Users
+* ![](./img/Addusers1.PNG)
+* ![](./img/Addusers2.PNG)
+* ![](./img/Addusers3.PNG)
+* ![](./img/Addusers4.PNG)
+* ![](./img/Addusers5.PNG)
+* ![](./img/Addusers6.PNG)
+* ![](./img/Addusers7.PNG)
+#
+### home users created
+* ![](/img/namesUsers.PNG)
+#
+### Another user connectivity
+* ![](./img/KirinuserSettings.PNG)
+* ![](./img/Kirinuserconnectivity.PNG)
+
 
