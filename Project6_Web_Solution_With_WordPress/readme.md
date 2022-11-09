@@ -204,7 +204,7 @@
     * ![](./img/WordPressWorking.PNG)
 
 #
-* ![](/img/Completed.png)
+* ![](./img/Completed.png)
 
     
 
