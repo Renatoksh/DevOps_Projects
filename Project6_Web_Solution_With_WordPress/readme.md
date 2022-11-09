@@ -198,10 +198,10 @@
     * ![](./img/Port80.PNG)
 * 5) Try to access from your browser the link to your WordPress http://<Web-Server-Public-IP-Address>/wordpress/
     * ![](./img/WordpressInstallation.PNG)
-    * ![](/img/InfoInstallWordPress.PNG)
-    * ![](/img/wordpressSuccess.PNG)
-    * ![](/img/LoginWordPress.PNG)
-    * ![](/img/WordPressWorking.PNG)
+    * ![](./img/InfoInstallWordPress.PNG)
+    * ![](./img/wordpressSuccess.PNG)
+    * ![](./img/LoginWordPress.PNG)
+    * ![](./img/WordPressWorking.PNG)
 
 #
 * ![](/img/Completed.png)
