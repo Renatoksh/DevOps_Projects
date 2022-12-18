@@ -170,6 +170,3 @@ In the output you will see your server’s public hostname (DNS name) and public
 
 # Congratulations! You have finished your very first REAL LIFE PROJECT by deploying a LAMP stack website in AWS Cloud!
 * ![](./img/Completed.png)
-
-
-
