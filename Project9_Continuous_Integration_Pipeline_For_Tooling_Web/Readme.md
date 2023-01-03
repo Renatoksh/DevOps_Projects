@@ -106,8 +106,8 @@
 ### Issues encountered:
 ![](./img/Publish_over_ssh_issue1.png)
 ![](./img/Publish_over_ssh_issue.png)
-### Research for solution was complicated, but after some hours... Final solution: [Use Publish over SSH plugin in Jenkins to connect to new Server](https://youtu.be/lmRhhArh0Sg) from o:oomin to 12:00 minutes.
-#### Note: Steps were followed exactly how in the video demonstrated.
+### Research for solution [Jenkins_publish](https://9to5answer.com/jenkins-publish-over-ssh-shows-error-quot-jenkins-plugins-publish_over-bappublisherexception-failed-to-add-ssh-key-quot), Final solution: [Use Publish over SSH plugin in Jenkins to connect to new Server](https://youtu.be/lmRhhArh0Sg) from o:oomin to 12:00 minutes.
+#### Note: Steps were followed exactly how in the video is demonstrated.
 ![](./img/Publish_Over_SSH_success.PNG)
 ### Save the configuration, open your Jenkins job/project configuration page and add another one "Post-build Action"
 ![](./img/Post_build_actions.PNG)
