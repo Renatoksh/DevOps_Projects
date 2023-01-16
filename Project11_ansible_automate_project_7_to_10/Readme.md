@@ -105,8 +105,14 @@
 ### cd ansible-config-mgt
 ### ansible-playbook -i inventory/dev.yaml playbooks/common.yaml
 ![](./img/playbookworks.png)
+![](./img/playbookworks3.png)
 ### You can go to each of the servers and check if wireshark has been installed by running which wireshark or wireshark --version
 ![](./img/wiresharkinstalled.PNG)
+### We updated with Ansible architecture now looks like this:
+![](./img/Architecture_updated.PNG)
+### Congratulations
+### We have just automated your routine tasks by implementing your first Ansible project! There is more exciting projects ahead, so lets keep it moving!
+![](./img/Completed.png)
 
 
 
