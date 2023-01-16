@@ -85,39 +85,24 @@
 ### Commit your changes, create a Pull Request and merge them to master branch, make sure webhook triggered two consequent Jenkins jobs, they ran successfully and copied all the files to your Jenkins-Ansible server into /home/ubuntu/ansible-config-mgt/ directory.
 ### Now run the playbook against your uat inventory and see what happens:
 ### sudo ansible-playbook -i /home/ubuntu/ansible-config-mgt/inventory/uat.yml /home/ubuntu/ansible-config-mgt/playbooks/site.yaml
-![]()
+### uat-webservers testing for responding:
+![](./img/ansible_ping.PNG)
+### Issue encountered:
+![](./img/issue_playbook_webservers.PNG)
+### Solution:
+### SSH Agent and connect:
+![](./img/ssh_webuat1.PNG)
+![](./img/ssh_webuat2.PNG)
+### After configured SSH agent to the UAT webservers, try it again:
+![](./img/playbook_uat_webservers.PNG)
 ### You should be able to see both of your UAT Web servers configured and you can try to reach them from your browser:
 ### http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
 ### or
 ### http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<details>
-<summary>My top THINGS-TO-RANK</summary>
-
-1. Things
-
-</details>
-
-
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="YOUR-DARKMODE-IMAGE">
-    <source media="(prefers-color-scheme: light)" srcset="YOUR-LIGHTMODE-IMAGE">
-    <img alt="YOUR-ALT-TEXT" src="YOUR-DEFAULT-IMAGE">
-</picture>
+![](./img/Website_index_php.PNG)
+### Ansible Architecture now looks like this:
+![](./img/Ansible_Architecture.PNG)
+### In Project 13, you will see the difference between Static and Dynamic assignments.
+## Congratulations!
+### We have learned how to deploy and configure UAT Web Servers using Ansible imports and roles!
+![](./img/Completed.png)
