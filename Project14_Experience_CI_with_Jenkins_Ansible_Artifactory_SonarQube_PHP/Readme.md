@@ -51,7 +51,7 @@
 #### 12 Mean time to detection (MTTD)
 #### 13 Mean time to recovery (MTTR)
 ## SIMULATING A TYPICAL CI/CD PIPELINE FOR A PHP BASED APPLICATION
-![](/img/pipeline_based_App.PNG)
+![](./img/pipeline_based_App.PNG)
 #
 # ANSIBLE ROLES FOR CI ENVIRONMENT
 ### 1. Create Ec2 instance for Jenkins-Ansible server
